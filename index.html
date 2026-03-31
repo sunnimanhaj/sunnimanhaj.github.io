@@ -2,4 +2,80 @@
 layout: default
 ---
 
-Hello
+{% for post in paginator.posts %}
+<div class="col-6 col-lg-4 mb-1">  
+<div class="card h-100 product" 
+  data-name="{{ post.title }}"
+  data-price="{{ post.harga }}"
+  data-category="{{ post.categories }}" 
+  data-slug="{{ post.uid }}"
+  data-image="{% for image in post.images %}{% if image.lowres %}{{ site.url }}/assets/images/products/lowres/{{ image.lowres }}{% break %}{% endif %}{% endfor %}">
+{% for image in post.images %}
+  {% if image.lowres %}
+    <img src="{{ site.url }}/assets/images/products/lowres/{{ image.lowres }}" class="card-img-top" alt="{{ post.title }}">
+    {% break %}
+  {% endif %}
+{% endfor %}
+  <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">{{ post.harga }}</p>
+    <div class="d-flex justify-content-between">
+     <a href="{{ post.url }}" class="btn btn-outline-primary">Detail</a>
+     <button class="btn btn-primary favorite-btn"
+       data-name="{{ post.title }}"
+       data-slug="{{ post.uid }}"
+       data-price="{{ post.harga }}"
+       data-image="{% for image in post.images %}{% if image.lowres %}{{ site.url }}/assets/images/products/lowres/{{ image.lowres }}{% break %}{% endif %}{% endfor %}"><i class="bi bi-heart"></i></button>
+    </div>
+  </div>
+</div>
+</div>
+{% endfor %}
+<div class="d-block mt-5 mb-5">
+<nav aria-label="Page navigation mt-3 mb-5">
+  <ul class="pagination justify-content-center">
+    {% if paginator.previous_page %}
+    <li class="page-item">
+      <a href="{{ paginator.previous_page_path }}" class="page-link">Prev</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a href="{{ paginator.previous_page_path }}" class="page-link">Prev</a>
+    </li>
+    {% endif %}
+    <li class="page-item">
+      <span class="page-link">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    </li>
+    {% if paginator.next_page %}
+    <li class="page-item">
+      <a class="page-link" href="{{ paginator.next_page_path }}">Next</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="{{ paginator.next_page_path }}">Next</a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+<!-- Pagination links -->
+<div class="pagination d-none">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+      Previous
+    </a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
+</div>
+{% if paginator.posts.size == 0 %}
+  <p>No products found. Check if the products exist in your Jekyll site.</p>
+{% endif %}
