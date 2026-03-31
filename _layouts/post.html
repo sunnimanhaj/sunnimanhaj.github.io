@@ -5,7 +5,7 @@ layout: default
 <div class="bg-white py-10 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     {% if page.source %}
-     {{ page.author }} :
+     <b>{{ page.author }} :</b>
     {% endif %}
     {{ page.content }}
   </div>
@@ -16,9 +16,9 @@ layout: default
   </li>
   {% else %}
  {% endif %} 
- {% if page.url %}
+ {% if page.link %}
   <li class="list-group-item bg-transparent">
-   <a href="{{ page.url }}" target="_blank" rel="nofollow"><b>Source</b></a>
+   <a href="{{ page.link }}" target="_blank" rel="nofollow">Source</a>
   </li>
   {% else %}
  {% endif %}
