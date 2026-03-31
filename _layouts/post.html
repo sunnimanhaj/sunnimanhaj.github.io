@@ -2,6 +2,12 @@
 layout: default
 ---
 {% if page.date %}
+<div class="breadcrumbs max-w-xs text-sm mb-5">
+  <ul>
+    <li><a href="{{ site.url }}">Home</a></li>
+    <li>{{ page.title }}</li>
+  </ul>
+</div>
 <div class="py-10 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     {% if page.author %}
