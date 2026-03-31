@@ -4,11 +4,12 @@ layout: default
 {% if page.date %}
 <div class="py-10 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    {% if page.source %}
+    {% if page.author %}
      <b>{{ page.author }} :</b>
     {% endif %}
     {{ page.content }}
-  </div>
+
+<div class="mt-5">
    {% if page.source %}
   <li class="list-group-item bg-transparent">
    Source : <b>{{ page.source }}</b>
@@ -21,5 +22,8 @@ layout: default
   </li>
   {% else %}
  {% endif %}
+</div>
+    
+  </div>
 </div>
 {% endif %}
