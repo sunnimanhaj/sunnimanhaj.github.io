@@ -1,0 +1,18 @@
+  <!-- Header / Blog Hero -->
+  <header class="relative overflow-hidden bg-gradient-to-r from-amber-50 via-stone-50 to-orange-50 border-b border-amber-200/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-12">
+      <div class="text-center md:text-left md:flex md:justify-between md:items-end gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-full px-4 py-1.5 shadow-sm border border-amber-200/60 mb-3">
+            <i class="fas fa-globe-asia text-amber-600 text-sm"></i>
+            <span class="text-xs font-medium text-stone-700 tracking-wide">Menu</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-stone-800 to-amber-800 bg-clip-text text-transparent">
+            {{ site.title }}
+          </h1>
+          <p class="text-stone-600 mt-2 max-w-xl text-base">{{ site.desc }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
+  </header>
