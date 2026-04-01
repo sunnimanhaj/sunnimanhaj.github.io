@@ -1,4 +1,4 @@
-<footer class="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
+<footer class="hidden footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
   <nav class="flex flex-wrap justify-center gap-4 mb-4">
     {% for category in site.categories %}
       {% capture category_name %}{{ category | first }}{% endcapture %}
@@ -10,4 +10,22 @@
   <aside>
     <p>Copyright © {{ "now" | date: "%Y" }} - All rights reserved by {{ site.title }}</p>
   </aside>
+</footer>
+<footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+  <aside>
+    <p>
+      Copyright © {{ "now" | date: "%Y" }} - All rights reserved by {{ site.title }}
+    </p>
+  </aside>
+  <nav>
+    <h6 className="footer-title">Categories</h6>
+  <nav class="flex flex-wrap justify-center gap-4 mb-4">
+    {% for category in site.categories %}
+      {% capture category_name %}{{ category | first }}{% endcapture %}
+      <a href="/category/{{ category_name | slugify }}" class="link link-hover capitalize badge badge-soft badge-accent">
+        {{ category_name }}
+      </a>
+    {% endfor %}
+  </nav>
+  </nav>
 </footer>
