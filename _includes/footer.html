@@ -17,15 +17,13 @@
       Copyright © {{ "now" | date: "%Y" }} - All rights reserved by {{ site.title }}
     </p>
   </aside>
-  <nav>
+    <nav class="flex flex-wrap justify-center gap-4 mb-4">
     <h6 className="footer-title">Categories</h6>
-  <nav class="flex flex-wrap justify-center gap-4 mb-4">
     {% for category in site.categories %}
       {% capture category_name %}{{ category | first }}{% endcapture %}
       <a href="/category/{{ category_name | slugify }}" class="link link-hover capitalize badge badge-soft badge-accent">
         {{ category_name }}
       </a>
     {% endfor %}
-  </nav>
   </nav>
 </footer>
