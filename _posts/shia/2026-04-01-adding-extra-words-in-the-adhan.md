@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2026-04-01"
-title: "Adding Extra Words In Adhan"
+title: "Ruling on Adding Extra Words in the Adhan"
 author: "Sh. Ibn Baz"
 category: [shia, bidah]
 source: "Majmu' Fatawa of Shaykh Ibn Baz 10/334"
