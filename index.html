@@ -12,7 +12,7 @@ layout: default
           <time datetime="{{ post.date }}" class="text-gray-500">{{ post.date | date: "%b %d, %Y" }}</time>
             {% for category in post.categories %}
               <a class=""relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100" 
-                href="{{ site.baseurl }}/category/{{ category | slugify }}"><span class="capitalize">{{ category }}</span></a>{% unless forloop.last %} {% endunless %}
+                href="{{ site.baseurl }}/category/{{ category | slugify }}"><span class="badge badge-outline badge-accent capitalize">{{ category }}</span></a>{% unless forloop.last %} {% endunless %}
             {% endfor %}
         </div>
         <div class="group relative grow">
