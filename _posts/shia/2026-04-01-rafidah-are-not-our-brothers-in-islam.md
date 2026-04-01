@@ -3,7 +3,7 @@ layout: post
 date: "2026-04-01"
 title: "The Rafidah Are Not Our Brothers in Islam"
 author: "Sh. Salih Al-Fawzan"
-category: [shia, video]
+category: [shia]
 source: ""
 link: "https://youtu.be/q6N0gR8eYUs"
 ---
