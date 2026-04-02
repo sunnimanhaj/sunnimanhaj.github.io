@@ -1,6 +1,6 @@
 ---
 layout: post
-date: "2026-04-02"
+date: "2026-04-01"
 title: "Ruling on Extremism Regarding Saints"
 author: "Shaykhul-Islam Ibn Taymiyyah Al-Hanbali"
 category: [shia, sufism, general]
