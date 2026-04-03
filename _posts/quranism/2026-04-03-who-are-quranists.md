@@ -7,11 +7,9 @@ category: [quranism]
 source: "https://www.youtube.com/watch?v=vJFsb2EhrFc"
 ---
 
-The Quranists are those who reject the Sunnah and deny acting upon the Hadiths. They say: **'We only act according to the Quran.'** 
+The Quranists, who reject the Sunnah, refuse to act upon the Hadiths and say: **'We do not act except by the Quran.'** These people have lied, for they have not truly acted by the Quran, because Allah say in the Quran: **"And whatsoever the Messenger (Muhammad صلى الله عليه وسلم) gives you, take it; and whatsoever he forbids you, abstain (from it).1 And fear Allâh; verily, Allâh is Severe in punishment."** (al-Hashr 59:7)
 
-These people have lied, for they have not [truly] acted according to the Quran, because Allah said in the Quran: **"And whatsoever the Messenger (Muhammad صلى الله عليه وسلم) gives you, take it; and whatsoever he forbids you, abstain (from it).1 And fear Allâh; verily, Allâh is Severe in punishment."** (al-Hashr 59:7)
-
-And Allah the Almighty said to His Prophet: **'With clear signs and Books (We sent the Messengers). And We have also sent down unto you (O Muhammad صلى الله عليه و سلم) the Dhikr [reminder and the advice (i.e. the Qur’ân)], that you may explain clearly to men what is sent down to them,...'** (an-Nahl 16:44)
+And Allah the Almighty say to His Prophet: **'With clear signs and Books (We sent the Messengers). And We have also sent down unto you (O Muhammad صلى الله عليه و سلم) the Dhikr [reminder and the advice (i.e. the Qur’ân)], that you may explain clearly to men what is sent down to them,...'** (an-Nahl 16:44)
 
 If the Sunnah is abolished, how then is the Quran made clear? What [else] would explain the Quran? 
 
