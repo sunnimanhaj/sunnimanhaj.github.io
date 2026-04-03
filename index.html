@@ -6,16 +6,16 @@ layout: default
                 <header class="flex items-center gap-4 mb-4">
                     <span class="text-sm font-mono opacity-50">{{ post.date | date: "%b %d, %Y" }}</span>
                     {% for category in post.categories %}
-                      <a href="{{ site.baseurl }}/category/{{ category | slugify }}" class="px-3 py-1 border border-current text-xs font-bold uppercase tracking-widest">Creed</a>
+                      <a href="{{ site.baseurl }}/category/{{ category | slugify }}" class="px-3 py-1 border border-current text-xs font-bold uppercase tracking-widest">{{ category }}</a>
                     {% endfor %}
                 </header>
-                <a href="#" class="block">
+                <a href="{{ post.url }}" class="block">
                     <h2 class="text-3xl md:text-3xl font-black leading-tight tracking-tighter uppercase break-words group-hover:italic transition-all duration-300">
                        {{ post.title }}
                     </h2>
                 </a>
                 <p class="mt-8 text-xl md:text-2xl leading-relaxed max-w-3xl opacity-90">
-                    {{ post.content | strip_html | truncatewords: 120 }}
+                    {{ post.content | strip_html | truncatewords: 100 }}
                 </p>
                 <div class="mt-10">
                     <a href="{{ post.url }}" class="text-xl font-black border-b-4 border-current hover:bg-base-content hover:text-base-100 px-2 py-1 transition-all inline-block">
