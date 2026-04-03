@@ -20,8 +20,23 @@ layout: default
 <h3 class="text-xs font-sans font-black uppercase tracking-[0.3em] text-primary mb-10 border-b border-primary/10 pb-2">
     Posts in <b>{{ page.title }}</b>
 </h3>
+    <section class="max-w-6xl mx-auto px-8 md:px-12 pt-16 md:pt-24 border-b-4 border-current pb-12">
+        <span class="text-sm font-mono opacity-50 uppercase tracking-widest mb-4 block">Browsing Topic</span>
+        <h1 class="text-6xl md:text-6xl font-black uppercase tracking-tighter leading-none">{{ page.title }/h1>
+    </section>
 {% for post in site.categories[page.category] %}
-        <section class="mb-3">
+            <article class="group pb-12 border-b border-current border-opacity-20">
+                <time class="text-sm font-mono opacity-50 block mb-4">{{ post.date | date_to_string }}</time>
+                <a href="{{ post.url }}">
+                    <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tight group-hover:italic transition-all">
+                        {{ post.title }}
+                    </h2>
+                </a>
+                <p class="mt-6 text-xl opacity-80 line-clamp-2">
+                    A deep dive into why historical scholars maintained a clear distinction between...
+                </p>
+            </article>
+        <section class="mb-3 hide">
             <div class="space-y-6">
                 <div class="group flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 py-2 border-b border-base-200/50 hover:border-primary/20 transition-all">
                     <time class="font-sans text-[10px] font-bold opacity-30 w-20 shrink-0 uppercase tracking-tighter">{{ post.date | date_to_string }}</time>
