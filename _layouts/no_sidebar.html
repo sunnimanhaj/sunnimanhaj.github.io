@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full" data-theme="light">
+<head>
+{% include meta.html %} 
+</head>
+<body role="document" itemscope itemtype="https://schema.org/WebPage" class="min-h-screen bg-base-100 text-base-content">
+{% include header.html %} 
+    <main class="flex-grow flex flex-col items-center justify-center p-8 text-center">
+        <div class="max-w-4xl">
+            <h1 class="glitch text-[10rem] md:text-[20rem] font-black leading-none tracking-tighter uppercase transition-all duration-100 select-none">
+                404
+            </h1>
+            <h2 class="text-3xl md:text-5xl mb-2 font-black uppercase tracking-tighter mt-[-2rem] md:mt-[-4rem]">
+                You have reached a void.
+            </h2>
+            <p class="mt-8 text-xl md:text-2xl font-medium opacity-70 max-w-lg mx-auto leading-relaxed italic">
+                "The path you seek is currently unavailable or has been moved to another existence."
+            </p>
+            
+            <div class="mt-12 flex flex-col md:flex-row gap-4 justify-center">
+                <a href="{{ site.url }}" class="px-8 py-4 border-4 border-current font-black uppercase text-lg hover:bg-base-content hover:text-base-100 transition-all">
+                    Return to Reality
+                </a>
+                <a href="#" onclick="history.back()" class="px-8 py-4 border-2 border-current font-black uppercase text-lg hover:italic transition-all">
+                    Go Back
+                </a>
+            </div>
+        </div>
+    </main>
+ {% include footer.html %} 
+     <script>
+        const toggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        if (html.getAttribute('data-theme') === 'black') { toggle.checked = true; }
+        toggle.addEventListener('change', () => {
+            const newTheme = toggle.checked ? 'black' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>
