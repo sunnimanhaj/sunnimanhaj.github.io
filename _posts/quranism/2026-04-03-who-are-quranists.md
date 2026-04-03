@@ -1,6 +1,6 @@
 ---
 layout: post
-date: "2026-04-04"
+date: "2026-04-03"
 title: "Who Are The Quranists"
 author: "Sh. Salih Al-Fawzan"
 category: [quranism]
