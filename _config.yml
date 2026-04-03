@@ -68,7 +68,7 @@ collections:
     output: true
 
 jekyll-archives:
-  enabled: []
+  enabled: year
   layout: archive
   permalinks:
     year: '/:year/'
