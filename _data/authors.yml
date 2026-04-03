@@ -26,3 +26,23 @@
 - name: "Sh. Ibn Baz"
   url: "/author/ibn-baz"
   enabled: true
+
+- name: "Ibn Qutaybah"
+  url: "/author/qutaybah"
+  enabled: true
+
+- name: "Imam Al-Barbahari"
+  url: "/author/barbahari"
+  enabled: true
+
+- name: "Al-Qadi Ibn Iyyad"
+  url: "/author/ibn-iyyad"
+  enabled: true
+
+- name: "Imam Ash-Sha'bi"
+  url: "/author/shabi"
+  enabled: true
+
+- name: "Imam Ash-Shawkani"
+  url: "/author/shawkani"
+  enabled: true
