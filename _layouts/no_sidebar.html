@@ -9,6 +9,7 @@
      {{ content }}
     </main>
  {% include footer.html %} 
+    <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
      <script>
         const toggle = document.getElementById('theme-toggle');
         const html = document.documentElement;
@@ -19,5 +20,12 @@
             localStorage.setItem('theme', newTheme);
         });
     </script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json'
+  })
+</script>
 </body>
 </html>
