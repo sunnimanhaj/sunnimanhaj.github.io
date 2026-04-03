@@ -2,21 +2,27 @@
 - name: "Imam Ibn Taymiyyah"
   url: "/author/ibn-taymiyyah"
   enabled: true
+
 - name: "Sh. Hamad Al-Ansari"
   url: "/author/hamad-ansari"
   enabled: true
+
 - name: "Sh. Salih Al-Fawzan"
   url: "/author/salih-fawzan"
   enabled: true
+
 - name: "Imam As-Sam'ani"
   url: "/author/samani"
   enabled: true
+
 - name: "Imam Ahmad Ibn Hanbal"
   url: "/author/ahmad-ibn-hanbal
   enabled: true
+
 - name: "Sh. Muhammad Ibn Abdul-Wahhab Al-Hanbali"
   url: "/author/muhammad-abdul-wahhab"
   enabled: true
+
 - name: "Sh. Ibn Baz"
   url: "/author/ibn-baz"
   enabled: true
