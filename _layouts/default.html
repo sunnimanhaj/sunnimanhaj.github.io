@@ -6,8 +6,10 @@
 <body role="document" itemscope itemtype="https://schema.org/WebPage" class="min-h-screen bg-base-100 text-base-content">
 {% include header.html %} 
 <main class="max-w-6xl mx-auto p-8 md:p-12 grid grid-cols-1 lg:grid-cols-4 gap-16">
-<!-- main -->
+<section class="lg:col-span-3 space-y-24">
  {{ content }}
+</section>
+{% include aside.html %} 
 </main><!-- /main -->
  {% include footer.html %} 
 </body>
