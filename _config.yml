@@ -3,7 +3,7 @@ desc                : "Collections of the sayings of Scholars regarding sectaria
 baseurl             : "/"
 keywords            : "sect, shia, rafidah, sufi, sufism, khawarij, kharijites, islam, sunnah, salafi, salafism, sunni, ahlus-sunnah, bidah, bid'ah"
 url                 : "https://ahlus-sunnah.github.io"
-github_username     : sunnimanhaj
+github_username     : ahlus-sunnah
 permalink           : pretty
 markdown            : kramdown
 paginate            : 6
@@ -19,7 +19,6 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-archives
 
 exclude:
   - bin
@@ -67,12 +66,3 @@ collections:
   category:
     output: true
 
-jekyll-archives:
-  enabled: year
-  layout: archive
-  permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
