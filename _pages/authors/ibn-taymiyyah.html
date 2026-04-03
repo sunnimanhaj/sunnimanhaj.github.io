@@ -6,7 +6,7 @@ permalink: /author/ibn-taymiyyah/
 <h3 class="text-xs font-sans font-black uppercase tracking-[0.3em] text-primary mb-10 border-b border-primary/10 pb-2">
     Posts by <b>{{ page.title }}</b>
 </h3>
-{% assign author_posts = site.posts | where: 'author', page.author%}
+{% assign author_posts = site.posts | where: "author", "Shaykhul-Islam Ibn Taymiyyah" %}
 {% for post in author_posts %}
         <section class="mb-3">
             <div class="space-y-6">
