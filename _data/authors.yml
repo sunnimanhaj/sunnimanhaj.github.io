@@ -35,8 +35,8 @@
   url: "/author/barbahari"
   enabled: true
 
-- name: "Al-Qadi Ibn Iyyad"
-  url: "/author/ibn-iyyad"
+- name: "Al-Qadi Iyyad"
+  url: "/author/iyyad"
   enabled: true
 
 - name: "Imam Ash-Sha'bi"
