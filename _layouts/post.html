@@ -6,7 +6,6 @@ layout: default
             <header class="mb-12">
                 <div class="flex items-center gap-4 mb-6">
                     <span class="text-sm font-mono opacity-50 uppercase">Published: {{ page.date | date: "%B %d, %Y" }}</span>
-                    <span class="px-3 py-1 border border-current text-xs font-bold uppercase tracking-widest">Creed</span>
                 </div>
                 <h1 class="text-3xl md:text-4xl font-black leading-none tracking-tighter uppercase mb-10">
                    {{ page.title }}
@@ -19,7 +18,7 @@ layout: default
 
             <section class="prose-custom font-medium max-w-4xl">
                 {% if page.author %}
-                  <b>{{ page.author }} :</b>
+                  <b>{{ page.author }} :</b><br/>
                 {% endif %}
                 {{ page.content }}
                  {% if page.source %}
