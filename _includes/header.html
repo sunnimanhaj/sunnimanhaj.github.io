@@ -11,7 +11,7 @@
                     {{ site.title }}.
                 </a>
                 <span class="hidden lg:block font-mono uppercase opacity-40 tracking-widest border-l-2 border-current pl-6">
-                    {{ page.title }}
+                    {% if page.date %}{% else %}{{ page.title }}{% endif %}
                 </span>
             </div>
 
