@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2026-04-05"
-title: "Worship by Revelation, Not Custom"
+title: "Worship as Revelation, Not Custom"
 author: "Abu Abdullah Al-Haffar Al-Maliki"
 category: [bidah, mawlid]
 source: "Al-Mi’yar Al-Muarab 7/99"
