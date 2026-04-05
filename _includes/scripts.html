@@ -13,3 +13,57 @@
             localStorage.setItem('theme', newTheme);
         });
     </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const postsPerPage = 5; // Change this to your preference
+    const postWrapper = document.getElementById('post-wrapper');
+    const posts = Array.from(postWrapper.getElementsByClassName('post-item'));
+    const totalPages = Math.ceil(posts.length / postsPerPage);
+    let currentPage = 1;
+
+    const prevBtn = document.getElementById('prev-page');
+    const nextBtn = document.getElementById('next-page');
+    const indicator = document.getElementById('page-indicator');
+
+    function updatePagination() {
+        // Hide all posts
+        posts.forEach(post => post.style.display = 'none');
+
+        // Show posts for current page
+        const start = (currentPage - 1) * postsPerPage;
+        const end = start + postsPerPage;
+        posts.slice(start, end).forEach(post => post.style.display = 'block');
+
+        // Update UI
+        indicator.innerText = `Manuscript ${currentPage} of ${totalPages}`;
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = currentPage === totalPages;
+
+        // Scroll to top of list smoothly
+        if (currentPage > 1) {
+            postWrapper.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    prevBtn.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            updatePagination();
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            updatePagination();
+        }
+    });
+
+    // Initialize
+    if (posts.length <= postsPerPage) {
+        document.getElementById('pagination-controls').style.display = 'none';
+    } else {
+        updatePagination();
+    }
+});
+</script>
