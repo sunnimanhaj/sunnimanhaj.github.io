@@ -6,7 +6,7 @@ layout: default
         <h1 class="text-6xl md:text-6xl font-black uppercase tracking-tighter leading-none">{{ page.title }}</h1>
     </section>
 {% for post in site.categories[page.category] %}
-            <article class="group pb-6 border-b border-current border-opacity-20">
+            <article class="group pb-3">
                 <time class="text-sm font-mono opacity-50 block mb-4">{{ post.date | date_to_string }}</time>
                 <a href="{{ post.url }}">
                     <h2 class="text-3xl md:text-3xl font-black uppercase tracking-tight group-hover:italic transition-all">
