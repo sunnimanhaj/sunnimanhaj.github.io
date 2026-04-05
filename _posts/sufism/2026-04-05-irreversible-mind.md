@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2026-04-05"
-title: "The Irreversible Sanity"
+title: "The Irreversible Mind"
 author: "Imam Ash-Shafi'i"
 category: [sufism]
 source: "Tablis Iblees by Ibn al-Jawzi p.371"
