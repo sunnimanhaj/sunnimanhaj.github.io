@@ -5,10 +5,12 @@ layout: none
   {% for post in site.posts %}
     {
       "title"    : "{{ post.title | escape }}",
-      "category" : "{{ post.category }}",
+      "category" : "{{ post.category | join: ', '}}",
       "tags"     : "{{ post.tags | join: ', ' }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "date"     : "{{ post.date | date: '%B %d, %Y' }}"
+      "date"     : "{{ post.date | date: '%B %d, %Y' }}",
+      "hijri"    : "{{ post.hijri }}",        
+      "author"   : "{{ post.author }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
