@@ -41,6 +41,7 @@
 <meta name="title" content="{% if page.title %}{{ page.title | escape }}{% elsif post.title %}{{ post.title | escape }}{% else %}{{ site.title | escape | default: 'Sunni Manhaj' }}{% endif %}">
 <meta name='abstract' content='{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}'>
 <meta name="google-site-verification" content="FOeEtuS18pKCxyvP20VFuWrgOFZzmmAbSrBo4zJntTI" />
+<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
