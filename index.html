@@ -7,7 +7,7 @@ layout: default
                     <span class="text-sm font-mono opacity-50">{{ post.date | date: "%b %d, %Y" }}</span>
                     {% for category in post.categories %}
                       <a href="{{ site.baseurl }}/category/{{ category | slugify }}" 
-                                class="px-3 py-1 inline-block rounded-full border-2 border-slate-200 text-slate-600 dark:border-white/20 dark:text-slate-300 hover:border-black hover:bg-black hover:text-white dark:hover:border-white dark:hover:bg-white dark:hover:text-black text-[10px] font-black uppercase tracking-widest transition-all duration-200">{{ category }}</a>
+                                class="px-2 py-1 border border-current text-xs font-bold uppercase tracking-widest hover:bg-base-content hover:text-base-100 transition-all">{{ category }}</a>
                     {% endfor %}
                 </header>
                 <a href="{{ post.url }}" class="block">
