@@ -43,6 +43,12 @@ layout: default
                                <i class="fa-brands fa-x-twitter"></i>
                         </button>
                     </div>
+                    {% if page.next.url %}
+                    <a href="{{page.next.url}}" class="flex flex-col group">
+                        <span class="text-xs opacity-50 font-bold uppercase mb-2">Future Post</span>
+                        <span class="text-xl font-black uppercase group-hover:italic transition-all">← {{page.next.title}}</span>
+                    </a>
+                    {% endif %}
                 </div>
             </footer>
         </article>
