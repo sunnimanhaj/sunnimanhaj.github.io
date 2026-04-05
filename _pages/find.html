@@ -1,0 +1,104 @@
+---
+layout: default
+title: "Search"
+---
+    
+    <section class="mt-20 mb-12">
+        <h1 class="text-xs font-black uppercase tracking-[0.5em] mb-6 opacity-30">Archive Search</h1>
+        <div class="relative">
+            <input type="text" id="search-input" 
+                   placeholder="Keywords..." 
+                   class="w-full bg-transparent border-b-8 border-current py-8 text-5xl md:text-8xl font-black uppercase tracking-tighter focus:outline-none transition-all" />
+        </div>
+    </section>
+
+    <div id="results-meta" class="mb-8 text-[10px] font-mono uppercase tracking-widest opacity-40 italic hidden">
+        Querying database... <span id="results-count">0</span> matching manuscripts found.
+    </div>
+
+    <section id="results-container" class="space-y-12 mb-20">
+        </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const searchInput = document.getElementById('search-input');
+    const resultsContainer = document.getElementById('results-container');
+    const resultsMeta = document.getElementById('results-meta');
+    const resultsCount = document.getElementById('results-count');
+
+    let searchData = [];
+
+    // 1. Fetch the JSON data
+    fetch('{{ "/search.json" | relative_url }}')
+        .then(response => response.json())
+        .then(data => {
+            searchData = data;
+            
+            // 2. Check for URL Parameter on load
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            if (query) {
+                searchInput.value = query;
+                performSearch(query);
+            }
+        });
+
+    // 3. Listen for typing
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        performSearch(query);
+        
+        // Optional: Update URL without reloading page
+        const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?q=' + encodeURIComponent(query);
+        window.history.pushState({path:newUrl},'',newUrl);
+    });
+
+    function performSearch(query) {
+        if (query.length < 2) {
+            resultsContainer.innerHTML = '';
+            resultsMeta.classList.add('hidden');
+            return;
+        }
+
+        const matches = searchData.filter(post => {
+            return (
+                post.title.toLowerCase().includes(query) ||
+                post.category.toLowerCase().includes(query) ||
+                post.tags.toLowerCase().includes(query) ||
+                post.author.toLowerCase().includes(query)
+            );
+        });
+
+        displayResults(matches);
+    }
+
+    function displayResults(results) {
+        resultsContainer.innerHTML = '';
+        resultsMeta.classList.remove('hidden');
+        resultsCount.innerText = results.length;
+
+        if (results.length === 0) {
+            resultsContainer.innerHTML = '<p class="italic opacity-30 text-xl font-mono uppercase">No manuscripts matching that criteria.</p>';
+            return;
+        }
+
+        results.forEach(post => {
+            const html = `
+                <article class="group border-b border-current border-opacity-5 pb-8 transition-all">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <span class="text-[10px] font-mono opacity-40 uppercase tracking-widest">${post.category} // ${post.author}</span>
+                        <span class="text-[10px] font-mono opacity-20 uppercase">${post.date}</span>
+                    </div>
+                    <a href="${post.url}">
+                        <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter group-hover:italic transition-all leading-none">
+                            ${post.title}
+                        </h2>
+                    </a>
+                    ${post.hijri ? `<p class="mt-2 text-[9px] font-mono opacity-30 uppercase tracking-[0.2em] italic">${post.hijri}</p>` : ''}
+                </article>
+            `;
+            resultsContainer.insertAdjacentHTML('beforeend', html);
+        });
+    }
+});
+</script>
