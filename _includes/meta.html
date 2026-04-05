@@ -22,6 +22,7 @@
 {% else %}
 <title>{{ site.title | escape | default: 'Sunni Manhaj' }}</title>
 {% endif %}
+<meta name="description" content="{{ site.desc }}">
 <meta name="directory" content="submission">
 <meta name="news_keywords" content="{{ site.keywords }}">
 <meta name="keywords" content="{{ site.keywords }}"/>
@@ -39,7 +40,7 @@
 <meta name='url' content='{{ site.url }}'>
 <meta name='robots' content='index,follow'>
 <meta name="title" content="{% if page.title %}{{ page.title | escape }}{% elsif post.title %}{{ post.title | escape }}{% else %}{{ site.title | escape | default: 'Sunni Manhaj' }}{% endif %}">
-<meta name='abstract' content='{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}'>
+<meta name='abstract' content='{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.desc }}{% endif %}'>
 <meta name="google-site-verification" content="FOeEtuS18pKCxyvP20VFuWrgOFZzmmAbSrBo4zJntTI" />
 <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
