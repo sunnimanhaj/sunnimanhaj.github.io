@@ -1,5 +1,5 @@
 ---
-title: "Qadariyah"
-category: qadariyah
-permalink: "/category/qadariyah"
+title: "Qadariyyah"
+category: qadariyyah
+permalink: "/category/qadariyyah/"
 ---
