@@ -18,7 +18,7 @@ permalink: /find/
     </div>
 
     <section id="results-container" class="space-y-12 mb-20">
-        </section>
+    </section>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -29,6 +29,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let searchData = [];
 
+function checkUrlAndSearch() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+        if (query) {
+            const decodedQuery = decodeURIComponent(query);
+            searchInput.value = decodedQuery;
+            // We wait until searchData is loaded to perform the search
+            if (searchData.length > 0) {
+                performSearch(decodedQuery.toLowerCase());
+            }
+        }
+    }
+    
     // 1. Fetch the JSON data
     fetch('{{ "/search.json" | relative_url }}')
         .then(response => response.json())
@@ -49,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const query = e.target.value.toLowerCase();
         performSearch(query);
         
-        // Optional: Update URL without reloading page
         const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?q=' + encodeURIComponent(query);
         window.history.pushState({path:newUrl},'',newUrl);
     });
