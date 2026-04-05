@@ -3,7 +3,7 @@ layout: default
 ---
           {% for post in paginator.posts %}
             <article class="group">
-                <header class="flex items-center gap-4 mb-2">
+                <header class="flex flex-wrap items-center gap-4 mb-2">
                     <span class="text-sm font-mono opacity-50">{{ post.date | date: "%b %d, %Y" }}</span>
                     {% for category in post.categories %}
                       <a href="{{ site.baseurl }}/category/{{ category | slugify }}" 
