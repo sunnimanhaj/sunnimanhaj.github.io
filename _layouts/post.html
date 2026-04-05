@@ -32,14 +32,12 @@ layout: default
         
         <div class="order-2 md:order-1">
             {% if page.previous.url %}   
-            {% if page.previous.categories contains page.categories.first %}
             <a href="{{page.previous.url}}" class="flex flex-col group">
                 <span class="text-[10px] opacity-40 font-black uppercase tracking-[0.2em] mb-2">Previous Entry</span>
                 <span class="text-xl font-black uppercase group-hover:italic transition-all leading-tight">
                     ← {{page.previous.title | truncate: 30}}
                 </span>
             </a>
-            {% endif %}
             {% endif %}
         </div>
 
