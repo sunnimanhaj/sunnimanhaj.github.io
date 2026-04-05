@@ -3,11 +3,11 @@ layout: default
 ---
           {% for post in paginator.posts %}
             <article class="group">
-                <header class="flex items-center gap-4 mb-4">
+                <header class="flex items-center gap-4 mb-2">
                     <span class="text-sm font-mono opacity-50">{{ post.date | date: "%b %d, %Y" }}</span>
                     {% for category in post.categories %}
                       <a href="{{ site.baseurl }}/category/{{ category | slugify }}" 
-                                class="px-3 py-1 border border-current text-xs font-bold uppercase tracking-widest hover:bg-base-content hover:text-base-100 transition-all">{{ category }}</a>
+                                class="hidden px-3 py-1 border border-current text-xs font-bold uppercase tracking-widest hover:bg-base-content hover:text-base-100 transition-all">{{ category }}</a>
                     {% endfor %}
                 </header>
                 <a href="{{ post.url }}" class="block">
