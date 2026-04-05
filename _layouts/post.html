@@ -27,29 +27,53 @@ layout: default
  {% endif %}
             </section>
 
-            <footer class="mt-20 pt-10 border-t-4 border-current">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                    {% if page.previous.url %}    
-                    <a href="{{page.previous.url}}" class="flex flex-col group">
-                        <span class="text-xs opacity-50 font-bold uppercase mb-2">Past Post</span>
-                        <span class="text-xl font-black uppercase group-hover:italic transition-all">← {{page.previous.title}}</span>
-                    </a>
-                    {% endif %}
-                    <div class="flex gap-4">
-                        <button class="btn btn-circle border-2 border-current hover:bg-base-content hover:text-base-100">
-                                <i class="fa-brands fa-facebook-f"></i>
-                        </button>
-                        <button class="btn btn-circle border-2 border-current hover:bg-base-content hover:text-base-100">
-                               <i class="fa-brands fa-x-twitter"></i>
-                        </button>
-                    </div>
-                    {% if page.next.url %}
-                    <a href="{{page.next.url}}" class="flex flex-col group">
-                        <span class="text-xs opacity-50 font-bold uppercase mb-2">Future Post</span>
-                        <span class="text-xl font-black uppercase group-hover:italic transition-all">← {{page.next.title}}</span>
-                    </a>
-                    {% endif %}
-                </div>
-            </footer>
+<footer class="mt-20 pt-10 border-t-4 border-current">
+    <div class="grid grid-cols-1 md:grid-cols-3 items-start gap-8">
+        
+        <div class="order-2 md:order-1">
+            {% if page.previous.url %}    
+            <a href="{{page.previous.url}}" class="flex flex-col group">
+                <span class="text-[10px] opacity-40 font-black uppercase tracking-[0.2em] mb-2">Previous Entry</span>
+                <span class="text-xl font-black uppercase group-hover:italic transition-all leading-tight">
+                    ← {{page.previous.title}}
+                </span>
+            </a>
+            {% endif %}
+        </div>
+
+        <div class="order-1 md:order-2 flex flex-col items-center gap-3">
+            <span class="text-[10px] opacity-40 font-black uppercase tracking-[0.2em]">Share Archive</span>
+            <div class="flex gap-2">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" 
+                   target="_blank" 
+                   class="btn btn-sm btn-circle border-2 border-current hover:bg-base-content hover:text-base-100 transition-colors">
+                    <i class="fa-brands fa-facebook-f text-xs"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" 
+                   target="_blank" 
+                   class="btn btn-sm btn-circle border-2 border-current hover:bg-base-content hover:text-base-100 transition-colors">
+                    <i class="fa-brands fa-x-twitter text-xs"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?text={{ page.title }} {{ site.url }}{{ page.url }}" 
+                   target="_blank" 
+                   class="btn btn-sm btn-circle border-2 border-current hover:bg-base-content hover:text-base-100 transition-colors">
+                    <i class="fa-brands fa-whatsapp text-xs"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="order-3 text-left md:text-right">
+            {% if page.next.url %}
+            <a href="{{page.next.url}}" class="flex flex-col group">
+                <span class="text-[10px] opacity-40 font-black uppercase tracking-[0.2em] mb-2">Next Entry</span>
+                <span class="text-xl font-black uppercase group-hover:italic transition-all leading-tight">
+                    {{page.next.title}} →
+                </span>
+            </a>
+            {% endif %}
+        </div>
+
+    </div>
+</footer>
         </article>
 {% endif %}
