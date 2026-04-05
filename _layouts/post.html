@@ -27,15 +27,21 @@ layout: default
  {% endif %}
             </section>
 
-            <footer class="mt-20 pt-10 border-t-4 border-current hidden">
+            <footer class="mt-20 pt-10 border-t-4 border-current">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                    <a href="#" class="flex flex-col group">
-                        <span class="text-xs opacity-50 font-bold uppercase mb-2">Previous Post</span>
-                        <span class="text-xl font-black uppercase group-hover:italic transition-all">← Historical Consensus</span>
+                    {% if page.previous.url %}    
+                    <a href="{{page.previous.url}}" class="flex flex-col group">
+                        <span class="text-xs opacity-50 font-bold uppercase mb-2">Past Post</span>
+                        <span class="text-xl font-black uppercase group-hover:italic transition-all">← {{page.previous.title}}</span>
                     </a>
+                    {% endif %}
                     <div class="flex gap-4">
-                        <button class="btn btn-circle border-2 border-current hover:bg-base-content hover:text-base-100">FB</button>
-                        <button class="btn btn-circle border-2 border-current hover:bg-base-content hover:text-base-100">X</button>
+                        <button class="btn btn-circle border-2 border-current hover:bg-base-content hover:text-base-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M80 299.3l0 212.7 116 0 0-212.7 86.5 0 18-97.8-104.5 0 0-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4 .4 37 1.2l0-88.7C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4l0 42.1-66 0 0 97.8 66 0z"/></svg>
+                        </button>
+                        <button class="btn btn-circle border-2 border-current hover:bg-base-content hover:text-base-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z"/></svg>
+                        </button>
                     </div>
                 </div>
             </footer>
