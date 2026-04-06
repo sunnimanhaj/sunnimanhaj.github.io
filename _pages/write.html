@@ -22,36 +22,36 @@ permalink: /write/
         </section>
 
         <section class="p-8 border-4 border-current">
-            <form action="#" method="POST" class="space-y-6">
+            <form id="contact-form" method="POST" class="space-y-6">
                 <div>
                     <label class="block text-xs font-black uppercase mb-2 tracking-widest">Full Name</label>
-                    <input type="text" placeholder="NAME" class="w-full bg-transparent border-2 border-current p-3 font-bold uppercase placeholder:opacity-20 transition-all" required />
+                    <input name="Name" type="text" placeholder="NAME" class="w-full bg-transparent border-2 border-current p-3 font-bold uppercase placeholder:opacity-20 transition-all" required />
                 </div>
 
                 <div>
                     <label class="block text-xs font-black uppercase mb-2 tracking-widest">Email Address</label>
-                    <input type="email" placeholder="EMAIL" class="w-full bg-transparent border-2 border-current p-3 font-bold uppercase placeholder:opacity-20 transition-all" required />
+                    <input name="Email" type="email" placeholder="EMAIL" class="w-full bg-transparent border-2 border-current p-3 font-bold uppercase placeholder:opacity-20 transition-all" required />
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-xs font-black uppercase mb-2 tracking-widest optional-label">Topic/Category</label>
-                        <input type="text" placeholder="E.G. CREED" class="w-full bg-transparent border border-current border-opacity-30 p-3 font-bold uppercase placeholder:opacity-20 transition-all" />
+                        <input name="Topic" type="text" placeholder="E.G. CREED" class="w-full bg-transparent border border-current border-opacity-30 p-3 font-bold uppercase placeholder:opacity-20 transition-all" />
                     </div>
                     <div>
                         <label class="block text-xs font-black uppercase mb-2 tracking-widest optional-label">Translator</label>
-                        <input type="text" placeholder="IF APPLICABLE" class="w-full bg-transparent border border-current border-opacity-30 p-3 font-bold uppercase placeholder:opacity-20 transition-all" />
+                        <input name="Translator" type="text" placeholder="IF APPLICABLE" class="w-full bg-transparent border border-current border-opacity-30 p-3 font-bold uppercase placeholder:opacity-20 transition-all" />
                     </div>
                 </div>
 
-                <div>
+                <div class="hidden">
                     <label class="block text-xs font-black uppercase mb-2 tracking-widest optional-label">Website</label>
-                    <input type="url" placeholder="HTTPS://" class="w-full bg-transparent border border-current border-opacity-30 p-3 font-bold uppercase placeholder:opacity-20 transition-all" />
+                    <input name="Website" type="url" placeholder="HTTPS://" class="w-full bg-transparent border border-current border-opacity-30 p-3 font-bold uppercase placeholder:opacity-20 transition-all" />
                 </div>
 
                 <div>
                     <label class="block text-xs font-black uppercase mb-2 tracking-widest">The Body / Manuscript</label>
-                    <textarea rows="8" placeholder="ENTER YOUR TEXT HERE..." class="w-full bg-transparent border-2 border-current p-4 font-bold uppercase placeholder:opacity-20 transition-all resize-none" required></textarea>
+                    <textarea name="Message" rows="8" placeholder="ENTER YOUR TEXT HERE..." class="w-full bg-transparent border-2 border-current p-4 font-bold uppercase placeholder:opacity-20 transition-all resize-none" required></textarea>
                 </div>
 
                 <button type="submit" class="w-full py-5 bg-base-content text-base-100 font-black uppercase text-xl hover:italic transition-all duration-300">
@@ -60,3 +60,54 @@ permalink: /write/
             </form>
         </section>
 </div>
+
+SHOULD i use this for that ?
+
+<script>
+  const form = document.getElementById('contact-form');
+  const btn = document.getElementById('submit-btn');
+  const toastContainer = document.getElementById('toast-container');
+
+  // Helper function to show DaisyUI Snackbars
+  function showToast(message, type = 'success') {
+    const alertClass = type === 'success' ? 'alert-success' : 'alert-error';
+    const toast = document.createElement('div');
+    toast.className = `alert ${alertClass} shadow-lg font-bold uppercase rounded-none border-2 border-current`;
+    toast.innerHTML = `<span>${message}</span>`;
+    
+    toastContainer.appendChild(toast);
+
+    // Remove toast after 4 seconds
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'transition-opacity', 'duration-500');
+      setTimeout(() => toast.remove(), 500);
+    }, 4000);
+  }
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+
+    fetch('https://script.google.com/macros/s/AKfycbxVmyBg0VOpQ_Fzso0B5EmZraygzFQoaJ8QZ39qgNXmApaRkWqcvsmvYyg7ndreKq7Y/exec', { 
+        method: 'POST', 
+        body: new FormData(form)
+    })
+    .then(response => {
+        if(response.ok) {
+            showToast("Message Sent Successfully!");
+            form.reset();
+        } else {
+            throw new Error();
+        }
+    })
+    .catch(error => {
+        showToast("Error! Please try again later.", "error");
+        console.error('Error!', error.message);
+    })
+    .finally(() => {
+        btn.disabled = false;
+        btn.innerText = "Submit →";
+    });
+  });
+</script>
