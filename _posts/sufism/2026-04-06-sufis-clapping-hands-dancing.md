@@ -16,11 +16,11 @@ Allah Ta'ala says:
 
 Imam al-Qurtubi, may Allah have mercy on him, said: 
 
+المكاء ضرب بالأيدي، والتصدية صياح . وعلى التفسيرين ففيه ردعلى الجهال من الصوفية الذين يرقصون ويصفقون ويصعقون . وذلك كله منكر يتنزه عن مثله العقلاء، ويتشبه فاعله بالمشركين فيما كانوا يفعلونه عند البيت 
+
 **Al-Muka’ is the clapping of hands, and Al-Tasdiyah is shouting. According to both interpretations, this is a rebuttal against those ignorant among the Sufis who dance, clap, and fall into ecstatic faints. All of that is reprehensible behavior that rational people keep themselves above; whoever does such things resembles the polytheists in what they used to do at the Sacred House (the Kaabah).** [^1]
 
-المكاء ضرب بالأيدي، والتصدية صياح . وعلى التفسيرين ففيه ردعلى الجهال من الصوفية الذين يرقصون ويصفقون ويصعقون . وذلك كله منكر يتنزه عن مثله العقلاء، ويتشبه فاعله بالمشركين فيما كانوا يفعلونه عند البيت . 
-
-Imam Ibn Rajab al-Hanbali said:
+Imam Ibn Rajab al-Hanbali, may Allah have mercy on him, said:
 
 فَمَنْ تَقَرَّبَ إِلَى اللَّهِ بِعَمَلٍ لَمْ يَجْعَلْهُ اللَّهُ وَرَسُولُهُ قُرْبَةً إِلَى اللَّهِ، فَعَمَلُهُ بَاطِلٌ مَرْدُودٌ عَلَيْهِ، وَهُوَ شَبِيهٌ بِحَالِ الَّذِينَ كَانَتْ صَلَاتُهُمْ عِنْدَ الْبَيْتِ مُكَاءً وَتَصْدِيَةً، وَهَذَا كَمَنْ تَقَرَّبَ إِلَى اللَّهِ تَعَالَى بِسَمَاعِ الْمَلَاهِي، أَوْ بِالرَّقْصِ.
 
