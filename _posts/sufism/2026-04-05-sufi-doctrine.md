@@ -7,6 +7,6 @@ category: [sufism]
 source: "Jami' li Ahkam Al-Quran by Al-Qurtubi 11/237-238"
 ---
  
-The Sufi doctrine is idleness, ignorance, and misguidance; Islam is nothing but the Book of Allah (Al-Quran) and the Sunnah of His Messenger.
+The path of the Sufis is idleness, ignorance, and misguidance; Islam is nothing but the Book of Allah (Al-Quran) and the Sunnah of His Messenger.
 
 مذهب الصوفية بطالة وجهالة وضلالة، وما الإسلام إلا كتاب الله، وسنة رسوله
