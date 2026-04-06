@@ -3,7 +3,7 @@ layout: post
 date: "2026-04-06"
 title: "The Sufi: Ibn Arabi"
 author: "Imam Taqiyuddin al-Subki"
-category: [sufism]
+category: [sufism, theologians]
 source: "Mughni al-Muḥtaj by al-Sharbini 3/61"
 ---
 
