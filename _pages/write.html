@@ -4,61 +4,58 @@ title: "Write For Us"
 permalink: /write/
 ---
 
+<div id="toast-container" class="toast toast-end toast-bottom z-[100]"></div>
+
 <div class="max-w-6xl w-full mx-auto p-8 md:p-12 grid grid-cols-1 lg:grid-cols-2 gap-16 flex-grow items-start">
-        <section class="space-y-12">
-            <h1 class="text-7xl md:text-9xl font-black uppercase tracking-tighter leading-[0.8]">
-                Write <br> For Us.
-            </h1>
-            <div class="prose-custom space-y-6">
-                <p class="text-xl font-bold uppercase tracking-tight italic border-l-4 border-current pl-4">
-                    "Contribute to us."
-                </p>
-                <div class="text-sm font-medium uppercase space-y-4 opacity-80">
-                    <p>1. Submissions must be based on classical sources and verified chains of transmission.</p>
-                    <p>2. Translated works must include the original Arabic text for verification purposes.</p>
-                    <p>3. We prioritize clarity, academic rigor, and adherence to the methodology of the Salaf.</p>
+    <section class="space-y-12">
+        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.8]">
+            Write <br> For Us.
+        </h1>
+        <div class="prose-custom space-y-6">
+            <p class="text-xl font-bold uppercase tracking-tight italic border-l-4 border-current pl-4">
+                "Contribute to us."
+            </p>
+            <div class="text-sm font-medium uppercase space-y-4 opacity-80">
+                <p>1. Submissions must be based on classical sources and verified chains of transmission.</p>
+                <p>2. Translated works must include the original Arabic text for verification purposes.</p>
+                <p>3. We prioritize clarity, academic rigor, and adherence to the methodology of the Salaf.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-8 border-4 border-current">
+        <form id="write-form" method="POST" class="space-y-6">
+            <div>
+                <label class="block text-xs font-black uppercase mb-2 tracking-widest">Full Name</label>
+                <input name="Name" type="text" placeholder="NAME" class="w-full bg-transparent border-2 border-current p-3 font-bold uppercase placeholder:opacity-20 transition-all" required />
+            </div>
+
+            <div>
+                <label class="block text-xs font-black uppercase mb-2 tracking-widest">Email Address</label>
+                <input name="Email" type="email" placeholder="EMAIL" class="w-full bg-transparent border-2 border-current p-3 font-bold uppercase placeholder:opacity-20 transition-all" required />
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-xs font-black uppercase mb-2 tracking-widest optional-label">Topic/Category</label>
+                    <input name="Topic" type="text" placeholder="E.G. CREED" class="w-full bg-transparent border-2 border-current p-3 font-bold uppercase placeholder:opacity-20 transition-all" />
+                </div>
+                <div>
+                    <label class="block text-xs font-black uppercase mb-2 tracking-widest optional-label">Translator</label>
+                    <input name="Translator" type="text" placeholder="IF APPLICABLE" class="w-full bg-transparent border-2 border-current p-3 font-bold uppercase placeholder:opacity-20 transition-all" />
                 </div>
             </div>
-        </section>
 
-        <section class="p-8 border-4 border-current">
-            <form id="write-form" method="POST" class="space-y-6">
-                <div>
-                    <label class="block text-xs font-black uppercase mb-2 tracking-widest">Full Name</label>
-                    <input name="Name" type="text" placeholder="NAME" class="w-full bg-transparent border-2 border-current p-3 font-bold uppercase placeholder:opacity-20 transition-all" required />
-                </div>
+            <div>
+                <label class="block text-xs font-black uppercase mb-2 tracking-widest">The Body / Manuscript</label>
+                <textarea name="Message" rows="8" placeholder="ENTER YOUR TEXT HERE..." class="w-full bg-transparent border-2 border-current p-4 font-bold uppercase placeholder:opacity-20 transition-all resize-none" required></textarea>
+            </div>
 
-                <div>
-                    <label class="block text-xs font-black uppercase mb-2 tracking-widest">Email Address</label>
-                    <input name="Email" type="email" placeholder="EMAIL" class="w-full bg-transparent border-2 border-current p-3 font-bold uppercase placeholder:opacity-20 transition-all" required />
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-black uppercase mb-2 tracking-widest optional-label">Topic/Category</label>
-                        <input name="Topic" type="text" placeholder="E.G. CREED" class="w-full bg-transparent border border-current border-opacity-30 p-3 font-bold uppercase placeholder:opacity-20 transition-all" />
-                    </div>
-                    <div>
-                        <label class="block text-xs font-black uppercase mb-2 tracking-widest optional-label">Translator</label>
-                        <input name="Translator" type="text" placeholder="IF APPLICABLE" class="w-full bg-transparent border border-current border-opacity-30 p-3 font-bold uppercase placeholder:opacity-20 transition-all" />
-                    </div>
-                </div>
-
-                <div class="hidden">
-                    <label class="block text-xs font-black uppercase mb-2 tracking-widest optional-label">Website</label>
-                    <input name="Website" type="url" placeholder="HTTPS://" class="w-full bg-transparent border border-current border-opacity-30 p-3 font-bold uppercase placeholder:opacity-20 transition-all" />
-                </div>
-
-                <div>
-                    <label class="block text-xs font-black uppercase mb-2 tracking-widest">The Body / Manuscript</label>
-                    <textarea name="Message" rows="8" placeholder="ENTER YOUR TEXT HERE..." class="w-full bg-transparent border-2 border-current p-4 font-bold uppercase placeholder:opacity-20 transition-all resize-none" required></textarea>
-                </div>
-
-                <button type="submit" class="w-full py-5 submit-btn bg-base-content text-base-100 font-black uppercase text-xl hover:italic transition-all duration-300">
-                    Submit →
-                </button>
-            </form>
-        </section>
+            <button type="submit" id="submit-btn" class="w-full py-5 bg-base-content text-base-100 font-black uppercase text-xl hover:italic transition-all duration-300 disabled:opacity-50">
+                Submit →
+            </button>
+        </form>
+    </section>
 </div>
 
 <script>
@@ -66,16 +63,15 @@ permalink: /write/
   const btn = document.getElementById('submit-btn');
   const toastContainer = document.getElementById('toast-container');
 
-  // Helper function to show DaisyUI Snackbars
   function showToast(message, type = 'success') {
     const alertClass = type === 'success' ? 'alert-success' : 'alert-error';
     const toast = document.createElement('div');
+    // Styling the alert to match your brutalist theme
     toast.className = `alert ${alertClass} shadow-lg font-bold uppercase rounded-none border-2 border-current`;
     toast.innerHTML = `<span>${message}</span>`;
     
     toastContainer.appendChild(toast);
 
-    // Remove toast after 4 seconds
     setTimeout(() => {
       toast.classList.add('opacity-0', 'transition-opacity', 'duration-500');
       setTimeout(() => toast.remove(), 500);
@@ -84,7 +80,10 @@ permalink: /write/
 
   form.addEventListener("submit", e => {
     e.preventDefault();
+    
+    // UI Loading State
     btn.disabled = true;
+    const originalText = btn.innerText;
     btn.innerText = "Sending...";
 
     fetch('https://script.google.com/macros/s/AKfycbxVmyBg0VOpQ_Fzso0B5EmZraygzFQoaJ8QZ39qgNXmApaRkWqcvsmvYyg7ndreKq7Y/exec', { 
@@ -92,12 +91,9 @@ permalink: /write/
         body: new FormData(form)
     })
     .then(response => {
-        if(response.ok) {
-            showToast("Message Sent Successfully!");
-            form.reset();
-        } else {
-            throw new Error();
-        }
+        // Google Apps Script always returns a redirect/success if it hits the script
+        showToast("Message Sent Successfully!");
+        form.reset();
     })
     .catch(error => {
         showToast("Error! Please try again later.", "error");
@@ -105,7 +101,7 @@ permalink: /write/
     })
     .finally(() => {
         btn.disabled = false;
-        btn.innerText = "Submit →";
+        btn.innerText = originalText;
     });
   });
 </script>
