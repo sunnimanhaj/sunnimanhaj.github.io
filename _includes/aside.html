@@ -6,7 +6,7 @@
                 <div class="flex flex-wrap gap-2">
                     {% for category in site.categories %}
                     {% capture category_name %}{{ category | first }}{% endcapture %}
-                    <a href="/category/{{ category_name | slugify }}" class="px-4 py-2 border-2 border-current font-bold uppercase text-xs hover:bg-base-content hover:text-base-100 transition-all">{{ category_name[0] }} ({{ category_name[1].size }})</a>
+                    <a href="/category/{{ category_name | slugify }}" class="px-4 py-2 border-2 border-current font-bold uppercase text-xs hover:bg-base-content hover:text-base-100 transition-all">{{ category_name }} ({{ category_name[1].size }})</a>
                     {% endfor %}
                 </div>
             </div>
