@@ -1,32 +1,21 @@
 ---
-layout: no_sidebar
-title: "Search for... anything?"
+layout: default
+title: "Search for...anything?"
 permalink: /search/
 ---
+    
+    <section class="mt-1 mb-3">
+        <h1 class="text-xs font-black uppercase tracking-[0.5em] mb-3 opacity-30">Search</h1>
+        <div class="relative">
+            <input type="text" id="search-input" 
+                   placeholder="Keyword..." 
+                   class="w-full bg-transparent border-b-8 border-current py-8 text-3xl md:text-8xl font-black uppercase tracking-tighter focus:outline-none transition-all" />
+        </div>
+    </section>
 
-                <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-12">
-                    Search
-                </h1>
+    <div id="results-meta" class="mb-3 text-[14px] font-mono uppercase tracking-widest italic hidden">
+        Querying database... <span id="results-count">0</span> matching manuscripts found.
+    </div>
 
-                <div class="space-y-8">
-                    <div class="relative">
-                        <label class="block text-[10px] font-black uppercase tracking-widest mb-2 opacity-50">Filter_Keywords</label>
-                        <input type="text" 
-                               id="search-input"
-                               placeholder="Start typing..." 
-                               class="w-full bg-transparent border-b-4 border-current py-4 text-2xl font-black uppercase placeholder:opacity-10" 
-                               autofocus />
-                    </div>
-
-                    <div class="flex flex-wrap gap-2 pt-4">
-                        <button class="btn btn-xs btn-outline rounded-none border-current font-black uppercase text-[9px] hover:bg-base-content hover:text-base-100 transition-all italic">#Creed</button>
-                        <button class="btn btn-xs btn-outline rounded-none border-current font-black uppercase text-[9px] hover:bg-base-content hover:text-base-100 transition-all">#Sunnah</button>
-                        <button class="btn btn-xs btn-outline rounded-none border-current font-black uppercase text-[9px] hover:bg-base-content hover:text-base-100 transition-all">#Sectarianism</button>
-                    </div>
-                </div>
-            </div>
-
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
-         <ul id="results-container"></ul>
-        </section>
-
+    <section id="results-container" class="space-y-12 mb-5">
+    </section>
