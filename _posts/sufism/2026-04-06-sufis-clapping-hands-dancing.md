@@ -29,3 +29,5 @@ Imam Ibn Rajab al-Hanbali, may Allah have mercy on him, said:
 [^1]: Tafsir al-Qurtubi 7/400
 [^2]: Jami' al-Ulum wal-Hikam 1/178
 
+See also : [The Scholars condemning the Sufi dancing](https://thewayofsalafiyyah.com/2017/02/04/sayings-of-the-scholars-of-islaam-condemning-the-soofi-raqsdancing/)
+
