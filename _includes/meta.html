@@ -5,9 +5,8 @@
 <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
 <meta name="HandheldFriendly" content="True">
 <meta name='date' content='{{ site.time }}'>
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="{{ '/manifest.json' | absolute_url }} ">
 <link rel="apple-touch-icon" href="/assets/icon-192.png">
-<meta name="theme-color" content="#000000">
 <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | absolute_url }}" />
 <link rel='shortlink' href='{{ page.url | replace:'/index.html','/' | absolute_url }}'>
 <title>{{ page.title | default: site.title | escape }}</title>
@@ -21,11 +20,11 @@
 <meta name='distribution' content='Global'>
 <meta name='rating' content='General'>
 <meta name='revisit-after' content='3 days'>
-<meta name='subtitle' content='Ahlus-Sunnah Manhaj'>
+<meta name='subtitle' content='{{ page.title | default: site.title | escape }}'>
 <meta name='target' content='all'>
 <meta name='identifier-URL' content='{{ page.url | replace:'/index.html','/' | absolute_url }}'>
 <meta name='directory' content='submission'>
-<meta itemprop='name' content='{{ site.title }}'>
+<meta itemprop='name' content='{{ page.title | default: site.title | escape }}'>
 <meta name='url' content='{{ page.url | replace:'/index.html','/' | absolute_url }}'>
 <meta name='robots' content='index,follow'>
 <meta name="title" content="{% if page.title %}{{ page.title | escape }}{% elsif post.title %}{{ post.title | escape }}{% else %}{{ site.title | escape | default: 'Sunni Manhaj' }}{% endif %}">
