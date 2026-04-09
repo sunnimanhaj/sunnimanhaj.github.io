@@ -10,21 +10,19 @@ layout: default
                 <h1 class="text-3xl md:text-4xl font-black leading-none tracking-tighter uppercase mb-10">
                    {{ page.title }}
                 </h1>
+                <div class="border-y-2 border-current py-4 flex justify-between font-black uppercase text-sm">
+                    <span>{% if page.author %}{{ page.author }}{% endif %}</span>
+                    <span>
+                            {{ page.source }}{% if page.source %}{% endif %} 
+                            {% if page.link %}
+                            <a href="{{ page.link }}" target="_blank" rel="nofollow">Link <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            {% endif %}
+                    </span>
+                </div>   
             </header>
 
             <section class="prose-custom font-medium max-w-4xl">
-                {% if page.author %}
-                  <p class="mb-3"><b>{{ page.author }} :</b></p>
-                {% endif %}
                 {{ page.content }}
-                 {% if page.source %}
-   Source : <b>{{ page.source }}</b>
-  {% else %}
- {% endif %} 
-                     {% if page.link %}
-   <a href="{{ page.link }}" target="_blank" rel="nofollow">Link <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-  {% else %}
- {% endif %}
             </section>
 
 <footer class="mt-20 pt-10 border-t-4 border-current">
