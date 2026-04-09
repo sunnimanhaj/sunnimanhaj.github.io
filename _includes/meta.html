@@ -4,7 +4,7 @@
 <meta name="MobileOptimized" content="320" />
 <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
 <meta name="HandheldFriendly" content="True">
-<meta name='date' content='{{ site.time }}'>
+<meta name="date" content="{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}">
 <link rel="manifest" href="{{ '/manifest.json' | absolute_url }} ">
 <link rel="apple-touch-icon" href="/assets/icon-192.png">
 <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | absolute_url }}" />
