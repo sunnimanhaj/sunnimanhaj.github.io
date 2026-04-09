@@ -8,6 +8,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="/assets/icon-192.png">
 <meta name="theme-color" content="#000000">
+<link rel="canonical" href="{{ page.url | replace:'/index.html','/' | absolute_url }}" />
 {% if page.url =='/' %}
 <link rel="canonical" href="{{ site.url }}" />
 <link rel='shortlink' href='{{ site.url }}'>
