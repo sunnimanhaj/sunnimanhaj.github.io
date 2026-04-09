@@ -3,23 +3,43 @@ layout: default
 ---
 {% if page.date %}
         <article class="lg:col-span-3">
-            <header class="mb-12">
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="text-sm font-mono opacity-50 uppercase">Survived editing on {{ page.date | date: "%B %d, %Y" }}</span>
+<header class="mb-12">
+    <div class="flex items-center gap-4 mb-6">
+        <span class="text-sm font-mono opacity-50 uppercase tracking-tight">
+            Survived editing on {{ page.date | date: "%B %d, %Y" }}
+        </span>
+    </div>
+    
+    <h1 class="text-3xl md:text-5xl font-black leading-[0.9] tracking-tighter uppercase mb-10">
+        {{ page.title }}
+    </h1>
+
+    <div class="border-y-2 border-current py-4 flex flex-col md:flex-row md:justify-between font-black uppercase text-xs md:text-sm gap-y-4 md:gap-y-0">
+        
+        <div class="flex items-center gap-2">
+            {% if page.author %}
+                <span class="opacity-40 font-mono text-[10px] md:hidden">Author:</span>
+                <span>{{ page.author }}</span>
+            {% endif %}
+        </div>
+
+        <div class="flex flex-wrap md:justify-end items-center gap-x-4 gap-y-2 border-t border-current border-opacity-10 pt-4 md:pt-0 md:border-0">
+            {% if page.source %}
+                <div class="flex items-center gap-2">
+                    <span class="opacity-40 font-mono text-[10px] md:hidden">Source:</span>
+                    <span>{{ page.source }}</span>
                 </div>
-                <h1 class="text-3xl md:text-4xl font-black leading-none tracking-tighter uppercase mb-10">
-                   {{ page.title }}
-                </h1>
-                <div class="border-y-2 border-current py-4 flex justify-between font-black uppercase text-sm">
-                    <span>{% if page.author %}{{ page.author }}{% endif %}</span>
-                    <span>
-                            {{ page.source }}{% if page.source %}{% endif %} 
-                            {% if page.link %}
-                            <a href="{{ page.link }}" target="_blank" rel="nofollow">Link <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            {% endif %}
-                    </span>
-                </div>   
-            </header>
+            {% endif %}
+            
+            {% if page.link %}
+                <a href="{{ page.link }}" target="_blank" rel="nofollow" class="group flex items-center gap-1 hover:italic transition-all">
+                    <span class="underline decoration-1 underline-offset-4">Link</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                </a>
+            {% endif %}
+        </div>
+    </div>   
+</header>
 
             <section class="prose-custom font-medium max-w-4xl">
                 {{ page.content }}
