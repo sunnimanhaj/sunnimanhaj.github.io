@@ -23,10 +23,10 @@
 <meta name='revisit-after' content='3 days'>
 <meta name='subtitle' content='Ahlus-Sunnah Manhaj'>
 <meta name='target' content='all'>
-<meta name='identifier-URL' content='{{ site.url }}'>
+<meta name='identifier-URL' content='{{ page.url | replace:'/index.html','/' | absolute_url }}'>
 <meta name='directory' content='submission'>
 <meta itemprop='name' content='{{ site.title }}'>
-<meta name='url' content='{{ site.url }}'>
+<meta name='url' content='{{ page.url | replace:'/index.html','/' | absolute_url }}'>
 <meta name='robots' content='index,follow'>
 <meta name="title" content="{% if page.title %}{{ page.title | escape }}{% elsif post.title %}{{ post.title | escape }}{% else %}{{ site.title | escape | default: 'Sunni Manhaj' }}{% endif %}">
 <meta name='abstract' content='{{ page.ext | default: site.desc | strip_html | normalize_whitespace | truncate: 160 | escape }}'>
