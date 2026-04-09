@@ -6,6 +6,7 @@ author: "Imam Al-Qurtubi, Imam Ibn Rajab"
 category: [sufism]
 source: "Tafsir al-Qurtubi 7/400, Jami' al-Ulum wal-Hikam 1/178"
 link: "https://quran.ksu.edu.sa/tafseer/qortobi/sura8-aya35.html"
+ext : "This is a rebuttal against those ignorant among the Sufis who dance, clap, and fall into ecstatic faints."
 ---
 
 Allah Ta'ala says:
