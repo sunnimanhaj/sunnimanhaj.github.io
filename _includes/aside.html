@@ -1,16 +1,23 @@
-
-        <aside class="lg:col-span-1">
-         <div class="sticky top-12 space-y-12">
-            <div>
-                <h3 class="text-sm font-black uppercase tracking-[0.2em] mb-6 border-b-2 border-current pb-2">Topics</h3>
-                <div class="flex flex-wrap gap-2">
-                    {% for category in site.categories %}
-                    <a href="/category/{{ category[0] | slugify }}" class="px-4 py-2 border-2 border-current font-bold uppercase text-xs hover:bg-base-content hover:text-base-100 transition-all">
-                      {{ category[0] }} ({{ category[1].size }})
-                    </a>
-                    {% endfor %}
-                </div>
+<aside class="lg:col-span-1">
+    <div class="sticky top-24 space-y-12">
+        <div>
+            <h3 class="text-xs font-black uppercase tracking-[0.3em] mb-8 border-b-2 border-current pb-2 opacity-50">
+                Index / Topics
+            </h3>
+            <div class="flex flex-col gap-2">
+                {% for category in site.categories %}
+                <a href="/category/{{ category[0] | slugify }}" 
+                   class="group flex justify-between items-center px-4 py-3 border-2 border-current font-black uppercase text-[10px] tracking-widest hover:bg-base-content hover:text-base-100 transition-all">
+                    <span>{{ category[0] }}</span>
+                    <div class="flex items-center gap-3">
+                        <span class="h-3 w-[1px] bg-current opacity-20 group-hover:opacity-100"></span>
+                        <span class="font-mono opacity-40 group-hover:opacity-100">
+                            {{ category[1] | size | prepend: '00' | slice: -2, 2 }}
+                        </span>
+                    </div>
+                </a>
+                {% endfor %}
             </div>
-                 
-         </div>
-        </aside>
+        </div>
+    </div>
+</aside>
