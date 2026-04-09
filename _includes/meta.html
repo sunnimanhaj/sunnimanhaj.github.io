@@ -5,11 +5,6 @@
 <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
 <meta name="HandheldFriendly" content="True">
 <meta name="date" content="{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}">
-<link rel="manifest" href="{{ '/manifest.json' | absolute_url }} ">
-<link rel="apple-touch-icon" href="/assets/icon-192.png">
-<link rel="canonical" href="{{ page.url | replace:'/index.html','/' | absolute_url }}" />
-<link rel='shortlink' href='{{ page.url | replace:'/index.html','/' | absolute_url }}'>
-<title>{{ page.title | default: site.title | escape }}</title>
 <meta name="description" content="{{ page.ext | default: site.desc | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 <meta name="directory" content="submission">
 <meta name="news_keywords" content="{{ site.keywords }}">
@@ -30,7 +25,19 @@
 <meta name="title" content="{% if page.title %}{{ page.title | escape }}{% elsif post.title %}{{ post.title | escape }}{% else %}{{ site.title | escape | default: 'Sunni Manhaj' }}{% endif %}">
 <meta name='abstract' content='{{ page.ext | default: site.desc | strip_html | normalize_whitespace | truncate: 160 | escape }}'>
 <meta name="google-site-verification" content="FOeEtuS18pKCxyvP20VFuWrgOFZzmmAbSrBo4zJntTI" />
+<link rel="manifest" href="{{ '/manifest.json' | absolute_url }} ">
+<link rel="apple-touch-icon" href="{{ '/assets/icon-192.png' | absolute_url }} ">
+<link rel="canonical" href="{{ page.url | replace:'/index.html','/' | absolute_url }}" />
+<link rel='shortlink' href='{{ page.url | replace:'/index.html','/' | absolute_url }}'>
 <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
+<title>{{ page.title | default: site.title | escape }}</title>
+{% if page.date %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+<meta name="dc.date" content="{{ page.date | date_to_xmlschema }}">
+{% endif %}
+{% if page.last_modified_at %}
+<meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">
+{% endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
