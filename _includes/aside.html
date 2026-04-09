@@ -4,6 +4,17 @@
             <h3 class="text-xs font-black uppercase tracking-[0.3em] mb-8 border-b-2 border-current pb-2 opacity-50">
                 Index / Topics
             </h3>
+            <div class="flex flex-wrap gap-3">
+    {% for category in site.categories %}
+    <a href="/category/{{ category[0] | slugify }}" 
+       class="group flex items-center border-2 border-current font-black uppercase text-[10px] tracking-widest hover:bg-base-content hover:text-base-100 transition-all">
+        <span class="px-3 py-2">{{ category[0] }}</span>
+        <span class="bg-current text-base-100 px-2 py-2 border-l-2 border-current font-mono group-hover:bg-base-100 group-hover:text-base-content transition-all">
+            {{ category[1].size }}
+        </span>
+    </a>
+    {% endfor %}
+</div>
             <div class="flex flex-col gap-2">
                 {% for category in site.categories %}
                 <a href="/category/{{ category[0] | slugify }}" 
