@@ -14,14 +14,14 @@
 <meta name='distribution' content='Global'>
 <meta name='rating' content='General'>
 <meta name='revisit-after' content='3 days'>
-<meta name='subtitle' content='{{ page.title | default: site.title | escape }}'>
 <meta name='target' content='all'>
-<meta name='identifier-URL' content='{{ page.url | replace:'/index.html','/' | absolute_url }}'>
+<meta name='subtitle' content='{{ page.title | default: site.title | escape }}'>
+<meta name="identifier-URL" content="{{ page.url | replace:'/index.html','/' | absolute_url }}">
 <meta name='directory' content='submission'>
 <meta itemprop='name' content='{{ page.title | default: site.title | escape }}'>
-<meta name='url' content='{{ page.url | replace:'/index.html','/' | absolute_url }}'>
+<meta name='url' content="{{ page.url | replace:'/index.html','/' | absolute_url }}">
 <meta name='robots' content='index,follow'>
-<meta name="title" content="{% if page.title %}{{ page.title | escape }}{% elsif post.title %}{{ post.title | escape }}{% else %}{{ site.title | escape | default: 'Sunni Manhaj' }}{% endif %}">
+<meta name="title" content="{{ page.title | default: site.title | escape }}">
 <meta name='abstract' content='{{ page.ext | default: site.desc | strip_html | normalize_whitespace | truncate: 160 | escape }}'>
 <meta name="google-site-verification" content="FOeEtuS18pKCxyvP20VFuWrgOFZzmmAbSrBo4zJntTI" />
 <link rel="manifest" href="{{ '/manifest.json' | absolute_url }} ">
