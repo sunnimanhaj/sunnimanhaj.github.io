@@ -26,4 +26,6 @@ Regarding those described in these three questions: these people are not Muslims
 
 The reality is that a Muslim is the brother of a Muslim. The condition for [one to enter] Islam is to testify that **"There is no deity worthy of worship but Allah and that Muhammad is the Messenger of Allah"** — and that there is no prophet after him (ﷺ). A Muslim must believe in Allah, His angels, His books, His messengers, the Last Day, and al-Qadr (Divine Decree), both the good and the bad of it. Whoever does not believe in that is neither a Muslim nor a believer. Therefore, those who follow the creed mentioned in these questions are neither Muslim, nor Christian, nor Jewish. 
 
-[Listen more](https://www.instagram.com/tv/B0f0YLGA3Rw/)
+---
+
+[Listen here](https://www.instagram.com/tv/B0f0YLGA3Rw/) or [here](https://sunnahpublishing.net/ash-shaykh-al-allaamah-muhammad-ibn-saalih-al-luhaydaan-hafidhahullaah-on-the-disbelief-of-the-nation-of-islam/)
